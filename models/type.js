@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Type.associate = (models) => {
     
-    Type.hasMany(models.Post, {
+    Type.hasMany(models.Vehicle, {
       onDelete: "cascade",
     });
   };

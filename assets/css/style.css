@@ -1,0 +1,41 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+body {
+  background-color: #fed16e;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.radio {
+  display: none;
+}
+
+h3 {
+  text-align: center;
+}
+
+#navb {
+  background-color: #fed16e;
+  z-index: 0 !important;
+  z-index: 0;
+}
+
+.consumed ul li button {
+  display: none;
+}

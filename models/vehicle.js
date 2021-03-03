@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     // We're saying that a Post should belong to an Author
 
     //this code createsthe Authorsid column in the posts table
-    Vehicle.belongsTo(models.Author, {
+    Vehicle.belongsTo(models.Type, {
       // A Post can't be created without an Author due to the foreign key constraint
       foreignKey: {
         //when you create a post it has to have a corresponding author
