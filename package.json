@@ -1,8 +1,8 @@
 {
   "name": "community_car_share",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An app to share cars on a database",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
