@@ -11,9 +11,9 @@ app.engine('handlebars', expbs ({ defaultLayout: "main", partialsDir: __dirname 
 app.set('view engine', 'handlebars');
 
 // add the filepath to our controller where the / is
-var router = require("./routes/html-routes");
+const HTMLrouter = require("./routes/html-routes");
 // app.use(router);
-router(app);
+HTMLrouter(app);
 
 app.listen(PORT, () => {
     console.log('Server is up at PORT ' + PORT);
