@@ -4,12 +4,15 @@ li {
   background: #faebd7;
 }
 
+.nav-wrapper {
+  background-color: #2196f3 !important;
+
 .label {
   font-weight: bold;
 }
 
 body {
-  background-color: #fed16e;
+  background-color: #e3f2fd;
 }
 
 .create-update-form {
