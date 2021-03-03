@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/swhachey/community_car_share/issues"
   },
-  "homepage": "https://github.com/swhachey/community_car_share#readme"
+  "homepage": "https://github.com/swhachey/community_car_share#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
+  }
 }
