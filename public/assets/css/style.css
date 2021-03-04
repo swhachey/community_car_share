@@ -1,16 +1,22 @@
+* {
+  /* ↓ Now literally all elements display a sans-serif font */
+  font-family: sans-serif !important;
+  font-style: oblique;
+}
+
 li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
 }
 
-.nav-wrapper {
-  background-color: #2196f3 !important;
-
-.label {
-  font-weight: bold;
+.center-align {
+  background-color: #004d40 !important;
 }
 
+.nav-wrapper {
+  background-color: #004d40 !important;
+}
 body {
   background-color: #e3f2fd;
 }
@@ -45,4 +51,17 @@ h3 {
 
 .test {
   text-align: center;
+}
+
+.card-image {
+  object-fit: scale-down !important;
+  object-fit: fill !important;
+}
+img {
+  object-fit: scale-down !important;
+  object-fit: fill !important;
+}
+
+.welcome {
+  font-size: medium !important;
 }
