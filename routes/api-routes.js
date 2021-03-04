@@ -1,4 +1,6 @@
 const db = require('../models');
+var express = require("express");
+var router = express.Router();
 
 module.exports = (app) => {
   // GET route for getting all of the posts
@@ -36,5 +38,20 @@ module.exports = (app) => {
           price: req.body.price
         }
     }).then((dbPost) => res.json(dbPost));
-  }) 
+  });
+
+  app.post("/api/vehicles/", (req, res) => {
+      console.log(req.body)
+      db.Vehicle.create({
+          Make: req.body.makeupdate,
+          Model: req.body.modelupdate,
+          Year: req.body.yearupdate,
+          Color: req.body.colorupdate,
+          Price: req.body.priceupdate
+      })
+        .then((dbVehicle)=> {
+            console.log(dbVehicle)
+            res.redirect("/")
+        })
+  });
 }

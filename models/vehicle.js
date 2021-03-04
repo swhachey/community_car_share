@@ -1,31 +1,24 @@
 module.exports = (sequelize, DataTypes) => {
-  const Vehicle = sequelize.define("Vehicle", {
+  var Vehicle = sequelize.define("Vehicle", {
     Make: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [1],
-      },
     },
     Model: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1],
     },
     Year: {
-      type: DataTypes.TEXT,
+      type: DataTypes.INTEGER,
       allowNull: false,
-      len: [1],
     },
     Color: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1],
     },
-    Condition: {
-      type: DataTypes.TEXT,
+    Price: {
+      type: DataTypes.STRING,
       allowNull: false,
-      len: [1],
     },
   });
 

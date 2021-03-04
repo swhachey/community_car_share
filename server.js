@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const expbs = require('express-handlebars');
 const PORT = process.env.PORT || 3000;
+const db =require("./models")
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -23,6 +24,8 @@ HTMLrouter(app);
 const APIrouter = require("./routes/api-routes");
 APIrouter(app);
 
-app.listen(PORT, () => {
-    console.log('Server is up at PORT ' + PORT);
+db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
+    console.log("App now listening on port:", PORT);
+  });
 });
