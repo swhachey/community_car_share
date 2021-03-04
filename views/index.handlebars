@@ -1,16 +1,48 @@
-<br>
-<br>
-<br>
-<div class="container">
-  <h2>Welcome to the Community Car Share</h2>
+<body>
+  <div class="row">
+    <div class="col s1"></div>
 
-  <h3>Use the tabs above to either add your car to the car share database and start amking money or search for a car to
-    use. </h3>
-  <a id="postbtn" type="button" class="btn btn-danger" href="http://localhost:3000/post">POST</a>
+    <div class="col s5">
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FycyUyMHBhcmtpbmclMjBsb3R8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60">
+        </div>
+        <div class="card-content center">
+          <h6>SEARCH
+          </h6>
+          <p>for a car to rent and get where you need to be.</p>
+        </div>
+        <div class="card-action center">
+          <a id="searchbtn" type="button" class="btn btn-warning" href="http://localhost:3000/search">SEARCH</a>
+        </div>
+      </div>
+    </div>
 
+    <div class="col s5">
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="https://images.unsplash.com/photo-1583698896760-7355120cede6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80">
+        </div>
+        <div class="card-content center">
+          <h6>POST
+          </h6>
+          <p>a car for rent and start making money.</p>
+        </div>
+        {{!-- <div class="card-action center-align"></div> --}}
+        <div class="card-action center-align">
+          <a id="postbtn" type="button" class="btn btn-danger" href="http://localhost:3000/post">POST</a>
+        </div>
+        {{!--
+      </div> --}}
+    </div>
+  </div>
 
-  <a id="searchbtn" type="button" class="btn btn-warning" href="http://localhost:3000/search">SEARCH</a>
-</div>
+  <div class="col s1"></div>
+  </div>
+</body>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/assets/js/index.js" type="text/javascript">
