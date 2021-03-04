@@ -1,41 +1,3 @@
-{{!-- <ul>
-  {{#each burgers}}
-  {{#unless eaten}}
-  {{> burgers/burger-block eaten=true}}
-  {{/unless}}
-  {{/each}}
-</ul> --}}
-<div class="row">
-  {{!-- <div class="col s12">This div is 12-columns wide on all screen sizes</div> --}}
-  <div class="col s6">
-    <ul>
-      {{#each burgers}}
-      {{#unless eaten}}
-      {{> burgers/burger-block eaten=true}}
-      {{/unless}}
-      {{/each}}
-    </ul>
-  </div>
-  <div class="col s6 consumed">
-    <ul>
-      {{#each burgers}}
-      {{#if eaten}}
-      {{> burgers/burger-block eaten=false}}
-      {{/if}}
-      {{/each}}
-    </ul>
-  </div>
-</div>
-
-
-{{!-- <ul>
-  {{#each burgers}}
-  {{#if eaten}}
-  {{> burgers/burger-block eaten=false}}
-  {{/if}}
-  {{/each}}
-</ul> --}}
-
 <br>
 <br>
 <div class="container">
@@ -49,37 +11,46 @@
     </select>
   </div>
   <br>
-  <div class="mb-3">
-    <label for="make" class="form-label">Make</label>
-    <input type="text" class="form-control" id="makeupdate" placeholder="Make of vehicle">
-  </div>
-  <button type="button" class="btn btn-success">SEARCH MAKE</button>
+  <form action="/api/search/make/" method="GET">
+    {{!-- <div class="mb-3"> --}}
+      <label for="make" class="form-label">Make</label>
+      <input type="text" class="form-control" name="make" id="make" placeholder="Make of vehicle">
+      {{!--
+    </div> --}}
+    <button type="submit" class="btn btn-success">SEARCH MAKE</button>
+  </form>
   <br>
-  <div class="mb-3">
-    <label for="model" class="form-label">Model</label>
-    <input type="text" class="form-control" id="modelupdate" placeholder="Model of vehicle">
-  </div>
-  <button type="button" class="btn btn-success">SEARCH MODEL</button>
+  <form action="/api/search/model" method="GET">
+    <div class="mb-3">
+      <label for="model" class="form-label">Model</label>
+      <input type="text" class="form-control" name="model" id="modelupdate" placeholder="Model of vehicle">
+    </div>
+    <button type="submit" class="btn btn-success">SEARCH MODEL</button>
+  </form>
   <br>
-  <div class="mb-3">
-    <label for="year" class="form-label">Year</label>
-    <input type="text" class="form-control" id="yearupdate" placeholder="Year of vehicle">
-  </div>
-  <button type="button" class="btn btn-success">SEARCH YEAR</button>
+  <form action="/api/search/year" method="GET">
+    <div class="mb-3">
+      <label for="year" class="form-label">Year</label>
+      <input type="text" name="year" class="form-control" id="yearupdate" placeholder="Year of vehicle">
+    </div>
+    <button type="submit" class="btn btn-success">SEARCH YEAR</button>
+  </form>
   <br>
-  <div class="mb-3">
-    <label for="color" class="form-label">Color</label>
-    <input type="text" class="form-control" id="colorupdate" placeholder="Color of vehicle">
-  </div>
-  <button type="button" class="btn btn-success">SEARCH COLOR</button>
+  <form action="api/search/color" method="GET">
+    <div class="mb-3">
+      <label for="color" class="form-label">Color</label>
+      <input type="text" class="form-control" name="color" id="colorupdate" placeholder="Color of vehicle">
+    </div>
+    <button type="submit" class="btn btn-success">SEARCH COLOR</button>
+  </form>
   <br>
-  <div class="mb-3">
-    <label for="price" class="form-label">Price</label>
-    <input type="text" class="form-control" id="priceupdate" placeholder="Price to rent your car">
-  </div>
-  <button type="button" class="btn btn-success">SEARCH PRICE</button>
+  <form action="/api/search/price">
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="text" class="form-control" name="price" id="priceupdate" placeholder="Price to rent your car">
+    </div>
+    <button type="submit" class="btn btn-success">SEARCH PRICE</button>
+  </form>
 </div>
 
-<button>
-
-</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
