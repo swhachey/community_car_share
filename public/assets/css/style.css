@@ -1,7 +1,12 @@
-* {
+html * {
   /* ↓ Now literally all elements display a sans-serif font */
-  font-family: sans-serif !important;
+  font-family: "Times New Roman", Times, serif !important;
   font-style: oblique;
+  background-color: black;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 li {
@@ -16,6 +21,7 @@ li {
 
 .nav-wrapper {
   background-color: #004d40 !important;
+  font-family: "Times New Roman", Times, serif !important;
 }
 body {
   background-color: #e3f2fd;
