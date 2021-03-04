@@ -18,6 +18,9 @@ const HTMLrouter = require("./routes/html-routes");
 // app.use(router);
 HTMLrouter(app);
 
+const APIrouter = require("./routes/api-routes");
+APIrouter(app);
+
 app.listen(PORT, () => {
     console.log('Server is up at PORT ' + PORT);
 });
