@@ -19,8 +19,6 @@ const HTMLrouter = require("./routes/html-routes");
 // app.use(router);
 HTMLrouter(app);
 
-
-
 const APIrouter = require("./routes/api-routes");
 APIrouter(app);
 
