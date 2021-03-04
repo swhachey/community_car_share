@@ -6,9 +6,9 @@ module.exports = (app) => {
     res.render("index"))
   ;
   app.get('/post', (req, res) =>
-    res.render("post")
+    res.sendFile(path.join(__dirname, '../public/post.html'))
   );
   app.get('/search', (req, res) =>
-    res.render("search")
+    res.sendFile(path.join(__dirname, '../public/search.html'))
   );
 }
