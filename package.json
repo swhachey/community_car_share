@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/swhachey/community_car_share#readme",
   "dependencies": {
+    "@popperjs/core": "^2.9.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
     "handlebars": "^4.7.7",
