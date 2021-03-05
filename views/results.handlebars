@@ -1,16 +1,31 @@
-<h1>
-    YOOOOO
-    <ul>
-        {{#each results}}
-        <li>
-            <p>
-                {{dataValues.Make}}
-                {{dataValues.Model}}
-                {{dataValues.Year}}
-                {{dataValues.Price}}
-                {{dataValues.Email}}
-            </p>
-        </li>
+<div class="container">
+    {{#each results}}
+    <div class="card" style="background-color: silver
+    ">
+        <ul>
+            <li style="text-align: center;">
+                <h4>
+                    {{dataValues.Make}}
+                    {{dataValues.Model}}
+                </h4>
+                <p>
+                    Year:
+                    {{dataValues.Year}}
+                </p>
+                <p>
+                    Price to Rent Per Day:
+                    ${{dataValues.Price}}
+                </p>
+                <p>
+                    Email:
+                    <a href="mailto: {{dataValues.Email}}">
+                        {{dataValues.Email}}</a>
+
+                </p>
+            </li>
+
+        </ul>
+
         {{/each}}
-    </ul>
-</h1>
+    </div>
+</div>
