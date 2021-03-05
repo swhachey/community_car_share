@@ -7,6 +7,12 @@ html * {
 
 body {
   font-family: "Times New Roman", Times, serif !important;
+  background-image: url("https://images.unsplash.com/photo-1532264523420-881a47db012d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fHBhdHRlcm5lZCUyMHdhbGxwYXBlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60") !important;
+}
+
+body img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 li {
@@ -70,4 +76,19 @@ img {
 
 .welcome {
   font-size: medium !important;
+}
+
+.circle {
+  height: 250px !important;
+  width: 200px !important;
+}
+
+#carMoneyImg {
+  height: 250px !important;
+  width: 500px !important;
+}
+
+.carTruckVan {
+  height: 250px !important;
+  width: 500px !important;
 }
