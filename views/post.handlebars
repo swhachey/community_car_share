@@ -31,49 +31,54 @@
   <img </div>
 </div>
 
-<div id="vehicleQuestion">
-  <h3 class="center" style="color: white;">What type of vehicle would you like to add?</h3>
-  <div class="container">
-    <form action="/api/vehicles/" method="POST">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Vehicle Type:</option>
-        <option value="1">Car</option>
-        <option value="2">Truck</option>
-        <option value="3">Van</option>
-      </select>
-  </div>
-</div>
 
-<div class="container" id="vehicleInput">
-  <br>
-  <div class="mb-3">
-    <label for="make" class="form-label">Make</label>
-    <input type="text" class="form-control" name="makeupdate" id="makeupdate" placeholder="Make of vehicle">
-    {{!--
+<form action="/api/vehicles/" method="POST">
+
+  <div id="vehicleQuestion">
+    <h3 class="center" style="color: white;">What type of vehicle would you like to add?</h3>
+    <div class="container">
+      <form action="/api/vehicles/" method="POST">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Vehicle Type:</option>
+          <option value="1">Car</option>
+          <option value="2">Truck</option>
+          <option value="3">Van</option>
+        </select>
+    </div>
   </div>
-  <div class="mb-3"> --}}
-    <label for="model" class="form-label">Model</label>
-    <input type="text" class="form-control" name="modelupdate" id="modelupdate" placeholder="Model of vehicle">
-    {{!--
+
+
+  <div class="container" id="vehicleInput">
+    <br>
+    <div class="mb-3">
+      <label for="make" class="form-label">Make</label>
+      <input type="text" class="form-control" name="makeupdate" id="makeupdate" placeholder="Make of vehicle">
+      {{!--
+    </div>
+    <div class="mb-3"> --}}
+      <label for="model" class="form-label">Model</label>
+      <input type="text" class="form-control" name="modelupdate" id="modelupdate" placeholder="Model of vehicle">
+      {{!--
+    </div>
+    <div class="mb-3"> --}}
+      <label for="year" class="form-label">Year</label>
+      <input type="text" class="form-control" name="yearupdate" id="yearupdate" placeholder="Year of vehicle">
+      {{!--
+    </div> --}}
+    {{!-- <div class="mb-3"> --}}
+      <label for="color" class="form-label">Color</label>
+      <input type="text" class="form-control" name="colorupdate" id="colorupdate" placeholder="Color of vehicle">
+      {{!--
+    </div> --}}
+    {{!-- <div class="mb-3"> --}}
+      <label for="price" class="form-label">Price</label>
+      <input type="text" class="form-control" name="priceupdate" id="priceupdate" placeholder="Price to rent your car">
+      {{!--
+    </div> --}}
+    <button type="submit" class="btn btn-success" id="submitupdate">SUBMIT</button>
   </div>
-  <div class="mb-3"> --}}
-    <label for="year" class="form-label">Year</label>
-    <input type="text" class="form-control" name="yearupdate" id="yearupdate" placeholder="Year of vehicle">
-    {{!--
-  </div> --}}
-  {{!-- <div class="mb-3"> --}}
-    <label for="color" class="form-label">Color</label>
-    <input type="text" class="form-control" name="colorupdate" id="colorupdate" placeholder="Color of vehicle">
-    {{!--
-  </div> --}}
-  {{!-- <div class="mb-3"> --}}
-    <label for="price" class="form-label">Price</label>
-    <input type="text" class="form-control" name="priceupdate" id="priceupdate" placeholder="Price to rent your car">
-    {{!--
-  </div> --}}
-  <button type="submit" class="btn btn-success" id="submitupdate">SUBMIT</button>
-  </form>
-</div>
+</form>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

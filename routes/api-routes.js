@@ -1,43 +1,51 @@
 const db = require('../models');
 var express = require("express");
-var router = express.Router();
+
 
 module.exports = (app) => {
   // GET route for getting all of the posts
   app.get('/api/search/make/', (req, res) => {
-    db.Vehicle.findAll({
+      console.log(req.body)
+    db.Vehicle.findAll(
+        {
       where: {
-          make: req.body.make
+          Make: req.query.make
         }
-    }).then((dbPost) => res.json(dbPost));
+    }
+    ).then((dbVehicle) => {
+        res.json(dbVehicle)
+       res.redirect("/")
+    });
   }); 
+
   app.get('/api/search/model/', (req, res) => {
     db.Vehicle.findAll({
       where: {
-          model: req.body.model
+          Model: req.query.model
         }
-    }).then((dbPost) => res.json(dbPost));
+    }).then((dbVehicle) => res.json(dbVehicle));
   }); 
+  
   app.get('/api/search/year/', (req, res) => {
     db.Vehicle.findAll({
       where: {
-          year: req.body.year
+          Year: req.query.year
         }
-    }).then((dbPost) => res.json(dbPost));
+    }).then((dbVehicle) => res.json(dbVehicle));
   });
   app.get('/api/search/color/', (req, res) => {
     db.Vehicle.findAll({
       where: {
-          color: req.body.color
+          Color: req.query.color
         }
-    }).then((dbPost) => res.json(dbPost));
+    }).then((dbVehicle) => res.json(dbVehicle));
   }) ;
   app.get('/api/search/price/', (req, res) => {
     db.Vehicle.findAll({
       where: {
-          price: req.body.price
+          Price: req.query.price
         }
-    }).then((dbPost) => res.json(dbPost));
+    }).then((dbVehicle) => res.json(dbVehicle));
   });
 
   app.post("/api/vehicles/", (req, res) => {
