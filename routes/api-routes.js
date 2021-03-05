@@ -51,11 +51,13 @@ module.exports = (app) => {
   app.post("/api/vehicles/", (req, res) => {
       console.log(req.body)
       db.Vehicle.create({
+          Type: req.body.typeupdate,
           Make: req.body.makeupdate,
           Model: req.body.modelupdate,
           Year: req.body.yearupdate,
           Color: req.body.colorupdate,
-          Price: req.body.priceupdate
+          Price: req.body.priceupdate,
+          Email: req.body.emailupdate
       })
         .then((dbVehicle)=> {
             console.log(dbVehicle)
