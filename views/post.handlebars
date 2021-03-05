@@ -1,57 +1,15 @@
-<div class="center" id="threeVehicles">
-  <img
-    src="https://images.unsplash.com/photo-1562234246-ca4e88982724?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyJTIwbW9uZXl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-    class="img-thumbnail carTruckVan" id="carSelect" width="350" alt="woman taking money">
-  <img
-    src="https://images.unsplash.com/photo-1509510779868-337c9f58ad54?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE0fHx0cnVjayUyMDR4NHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60"
-    class="img-thumbnail carTruckVan" id="truckSelect" width="350" alt="woman taking money">
-  <img
-    src="https://images.unsplash.com/photo-1601230667063-bb62da594acf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fHZhbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-    class="img-thumbnail carTruckVan" id="vanSelect" width="350" alt="woman taking money">
-</div>
-
-<div class="center" id="vehicleSelectedCar">
-  <img
-    src="https://images.unsplash.com/photo-1562234246-ca4e88982724?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyJTIwbW9uZXl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-    class="img-thumbnail carTruckVan circle" id="carSelect" width="350" alt="woman taking money">
-  <img </div>
-</div>
-
-<div class="center" id="vehicleSelectedTruck">
-  <img
-    src="https://images.unsplash.com/photo-1509510779868-337c9f58ad54?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE0fHx0cnVjayUyMDR4NHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60"
-    class="img-thumbnail carTruckVan circle" id="carSelect" width="350" alt="woman taking money">
-  <img </div>
-</div>
-
-<div class="center" id="vehicleSelectedVan">
-  <img
-    src="https://images.unsplash.com/photo-1601230667063-bb62da594acf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fHZhbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-    class="img-thumbnail carTruckVan circle" id="carSelect" width="350" alt="woman taking money">
-  <img </div>
-</div>
-
-<div id="vehicleQuestion">
-  <h3 class="center" style="color: white;">What type of vehicle would you like to add?</h3>
+<br>
+<br>
+<div class="container">
+  <h3>Add your vehicle for Community Car Share</h3>
   <div class="container">
 
-    <form action="/api/vehicles/" method="POST">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Vehicle Type:</option>
-        <option value="1">Car</option>
-        <option value="2">Truck</option>
-        <option value="3">Van</option>
-      </select>
-  </div>
-</div>
-
-<div class="container" id="vehicleInput">
-  <br>
-  <div class="mb-3">
-    <label for="make" class="form-label">Make</label>
-    <input type="text" class="form-control" name="makeupdate" id="makeupdate" placeholder="Make of vehicle">
-    {{!--
-
+    <select class="form-select" aria-label="Default select example">
+      <option selected>What Type of Vehicle?</option>
+      <option value="1">Car</option>
+      <option value="2">Truck</option>
+      <option value="3">Van</option>
+    </select>
   </div>
   <br>
   <form action="/api/vehicles/" method="POST">
@@ -85,40 +43,5 @@
 </div>
 
 
-
-
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="assets/js/post.js" type="text/javascript"></script>
-<script>
-
-  var threeVehicles = document.querySelector("#threeVehicles");
-  var selectedVehicle = document.querySelector("#vehicleSelectedCar");
-  var selectedVehicle2 = document.querySelector("#vehicleSelectedTruck");
-  var selectedVehicle3 = document.querySelector("#vehicleSelectedVan");
-  var vehicQuestion = document.querySelector("#vehicleQuestion");
-  var vehicInput = document.querySelector("#vehicleInput");
-  selectedVehicle.hidden = true
-  selectedVehicle2.hidden = true
-  selectedVehicle3.hidden = true
-  vehicQuestion.hidden = false
-  vehicInput.hidden = true
-
-  $(".form-select").change(function () {
-    threeVehicles.hidden = true
-    vehicQuestion.hidden = true
-    vehicInput.hidden = false
-
-    if (this.value == 1) {
-      selectedVehicle.hidden = false
-    } else if (this.value == 2) {
-      selectedVehicle2.hidden = false
-    } else if (this.value == 3) {
-      selectedVehicle3.hidden = false
-    }
-
-
-  });
-
-</script>
