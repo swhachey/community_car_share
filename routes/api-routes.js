@@ -18,6 +18,19 @@ module.exports = (app) => {
     });
   }); 
 
+  app.get('/api/search/type/', (req, res) => {
+      console.log(req.body)
+    db.Vehicle.findAll(
+        {
+      where: {
+          Type: req.query.type
+        }
+    }
+    ).then((dbVehicle) => {
+        res.json(dbVehicle)
+    });
+  }); 
+
   app.get('/api/search/model/', (req, res) => {
     db.Vehicle.findAll({
       where: {
