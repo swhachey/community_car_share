@@ -3,21 +3,25 @@
 <div class="container">
   <h3>Search for a vehicle on Community Car Share</h3>
   <div class="container">
-    <select class="form-select" aria-label="Default select example">
-      <option selected>What Type of Vehicle?</option>
-      <option value="1">Car</option>
-      <option value="2">Truck</option>
-      <option value="3">Van</option>
-    </select>
+    <form action="/api/search/type/" method="GET">
+      <select class="form-select" aria-label="Default select example" name="type">
+        <option selected>What Type of Vehicle?</option>
+        <option value="Car">Car</option>
+        <option value="Truck">Truck</option>
+        <option value="Van">Van</option>
+      </select>
+      <button type="submit" class="btn btn-success">SEARCH TYPE</button>
+    </form>
   </div>
   <br>
-  <form action="/api/search/make/" method="GET">
-    {{!-- <div class="mb-3"> --}}
+
+  {{!-- <div class="mb-3"> --}}
+    <form action="/api/search/make" method="GET">
       <label for="make" class="form-label">Make</label>
       <input type="text" class="form-control" name="make" id="make" placeholder="Make of vehicle">
       {{!--
-    </div> --}}
-    <button type="submit" class="btn btn-success">SEARCH MAKE</button>
+  </div> --}}
+  <button type="submit" class="btn btn-success">SEARCH MAKE</button>
   </form>
   <br>
   <form action="/api/search/model" method="GET">
@@ -47,10 +51,10 @@
   <form action="/api/search/price">
     <div class="mb-3">
       <label for="price" class="form-label">Price</label>
-      <input type="text" class="form-control" name="price" id="priceupdate" placeholder="Price to rent your car">
+      <input type="text" class="form-control" name="price" id="priceupdate" placeholder="Price range to rent">
     </div>
     <button type="submit" class="btn btn-success">SEARCH PRICE</button>
   </form>
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -13,8 +13,26 @@ module.exports = (app) => {
         }
     }
     ).then((dbVehicle) => {
-        res.json(dbVehicle)
-       res.redirect("/")
+        return res.render("results", {
+          results: dbVehicle
+        })
+    });
+  }); 
+
+  app.get('/api/search/type/', (req, res) => {
+     
+    db.Vehicle.findAll(
+        {
+      where: {
+          Type: req.query.type
+        }
+    }
+    ).then((dbVehicle) => {
+        // res.json(dbVehicle)
+        return res.render("results", {
+          results: dbVehicle
+        })
+        // console.log(dbVehicle)
     });
   }); 
 
@@ -23,7 +41,10 @@ module.exports = (app) => {
       where: {
           Model: req.query.model
         }
-    }).then((dbVehicle) => res.json(dbVehicle));
+    }).then((dbVehicle) => { 
+      return res.render("results", {
+          results: dbVehicle
+        })});
   }); 
   
   app.get('/api/search/year/', (req, res) => {
@@ -31,21 +52,27 @@ module.exports = (app) => {
       where: {
           Year: req.query.year
         }
-    }).then((dbVehicle) => res.json(dbVehicle));
+    }).then((dbVehicle) => { return res.render("results", {
+          results: dbVehicle
+        })});
   });
   app.get('/api/search/color/', (req, res) => {
     db.Vehicle.findAll({
       where: {
           Color: req.query.color
         }
-    }).then((dbVehicle) => res.json(dbVehicle));
+    }).then((dbVehicle) => { return res.render("results", {
+          results: dbVehicle
+        })});
   }) ;
   app.get('/api/search/price/', (req, res) => {
     db.Vehicle.findAll({
       where: {
           Price: req.query.price
         }
-    }).then((dbVehicle) => res.json(dbVehicle));
+    }).then((dbVehicle) => { return res.render("results", {
+          results: dbVehicle
+        })});
   });
 
   app.post("/api/vehicles/", (req, res) => {
