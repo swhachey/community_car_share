@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Whsfb772020",
+    "password": "corne1177",
     "database": "carshare_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
