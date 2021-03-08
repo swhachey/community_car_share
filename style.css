@@ -6,6 +6,7 @@ li {
 
 .nav-wrapper {
   background-color: #2196f3 !important;
+}
 
 .label {
   font-weight: bold;
@@ -44,5 +45,9 @@ h3 {
 }
 
 .test {
+  text-align: center;
+}
+
+.card {
   text-align: center;
 }
