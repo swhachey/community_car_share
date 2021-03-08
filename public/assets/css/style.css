@@ -93,6 +93,9 @@ img {
   width: 500px !important;
 }
 
+#vehicleInput {
+  color: white !important;
+}
 .card {
   text-align: center;
 }
