@@ -92,3 +92,7 @@ img {
   height: 250px !important;
   width: 500px !important;
 }
+
+#vehicleInput {
+  color: white !important;
+}

@@ -48,73 +48,86 @@
   </div>
 
 
-  <br>
-  {{!-- <form action="/api/vehicles/" method="POST"> --}}
-    <div class="mb-3">
-      <label for="make" class="form-label">Make</label>
-      <input type="text" class="form-control" name="makeupdate" id="makeupdate" placeholder="Make of vehicle">
-      {{!--
+  <div class="container">
+    <div class="row">
+      <div class="col-4">col-4</div>
+      <div class="col-4">
+        {{!-- <form action="/api/vehicles/" method="POST"> --}}
+          <div class="mb-3" id="vehicleInput">
+            <label for="make" class="form-label">Make</label>
+            <input type="text" class="form-control" name="makeupdate" id="makeupdate" placeholder="Make of vehicle">
+            {{!--
+          </div>
+          <div class="mb-3"> --}}
+            <label for="model" class="form-label">Model</label>
+            <input type="text" class="form-control" name="modelupdate" id="modelupdate" placeholder="Model of vehicle">
+            {{!--
+          </div>
+          <div class="mb-3"> --}}
+            <label for="year" class="form-label">Year</label>
+            <input type="text" class="form-control" name="yearupdate" id="yearupdate" placeholder="Year of vehicle">
+            {{!--
+          </div> --}}
+          {{!-- <div class="mb-3"> --}}
+            <label for="color" class="form-label">Color</label>
+            <input type="text" class="form-control" name="colorupdate" id="colorupdate" placeholder="Color of vehicle">
+            {{!--
+          </div> --}}
+          {{!-- <div class="mb-3"> --}}
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" name="priceupdate" id="priceupdate"
+              placeholder="Price to rent your car">
+            {{!--
+          </div> --}}
+          <label for="email" class="form-label">Email</label>
+          <input type="text" class="form-control" name="emailupdate" id="emailupdate"
+            placeholder="Email to have sharers contact you">
+          {{!--
+      </div> --}}
+      <button type="submit" class="btn btn-success" id="submitupdate">SUBMIT</button>
     </div>
-    <div class="mb-3"> --}}
-      <label for="model" class="form-label">Model</label>
-      <input type="text" class="form-control" name="modelupdate" id="modelupdate" placeholder="Model of vehicle">
-      {{!--
-    </div>
-    <div class="mb-3"> --}}
-      <label for="year" class="form-label">Year</label>
-      <input type="text" class="form-control" name="yearupdate" id="yearupdate" placeholder="Year of vehicle">
-      {{!--
-    </div> --}}
-    {{!-- <div class="mb-3"> --}}
-      <label for="color" class="form-label">Color</label>
-      <input type="text" class="form-control" name="colorupdate" id="colorupdate" placeholder="Color of vehicle">
-      {{!--
-    </div> --}}
-    {{!-- <div class="mb-3"> --}}
-      <label for="price" class="form-label">Price</label>
-      <input type="text" class="form-control" name="priceupdate" id="priceupdate" placeholder="Price to rent your car">
-      {{!--
-    </div> --}}
-    <label for="email" class="form-label">Email</label>
-    <input type="text" class="form-control" name="emailupdate" id="emailupdate"
-      placeholder="Email to have sharers contact you">
-    {{!--
-    </div> --}}
-    <button type="submit" class="btn btn-success" id="submitupdate">SUBMIT</button>
-    </div>
-  </form>
+</form>
+
+
+</div>
+<div class="col-4">col-4</div>
+</div>
+</div>
+
+<br>
 
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="assets/js/post.js" type="text/javascript"></script>
-  <script>
 
-    var threeVehicles = document.querySelector("#threeVehicles");
-    var selectedVehicle = document.querySelector("#vehicleSelectedCar");
-    var selectedVehicle2 = document.querySelector("#vehicleSelectedTruck");
-    var selectedVehicle3 = document.querySelector("#vehicleSelectedVan");
-    var vehicQuestion = document.querySelector("#vehicleQuestion");
-    var vehicInput = document.querySelector("#vehicleInput");
-    selectedVehicle.hidden = true
-    selectedVehicle2.hidden = true
-    selectedVehicle3.hidden = true
-    vehicQuestion.hidden = false
-    vehicInput.hidden = true
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="assets/js/post.js" type="text/javascript"></script>
+<script>
 
-    $(".form-select").change(function () {
-      threeVehicles.hidden = true
-      vehicQuestion.hidden = true
-      vehicInput.hidden = false
+  var threeVehicles = document.querySelector("#threeVehicles");
+  var selectedVehicle = document.querySelector("#vehicleSelectedCar");
+  var selectedVehicle2 = document.querySelector("#vehicleSelectedTruck");
+  var selectedVehicle3 = document.querySelector("#vehicleSelectedVan");
+  var vehicQuestion = document.querySelector("#vehicleQuestion");
+  var vehicInput = document.querySelector("#vehicleInput");
+  selectedVehicle.hidden = true
+  selectedVehicle2.hidden = true
+  selectedVehicle3.hidden = true
+  vehicQuestion.hidden = false
+  vehicInput.hidden = true
 
-      if (this.value == 1) {
-        selectedVehicle.hidden = false
-      } else if (this.value == 2) {
-        selectedVehicle2.hidden = false
-      } else if (this.value == 3) {
-        selectedVehicle3.hidden = false
-      }
+  $(".form-select").change(function () {
+    threeVehicles.hidden = true
+    vehicQuestion.hidden = true
+    vehicInput.hidden = false
 
-    });
+    if (this.value == 'Car') {
+      selectedVehicle.hidden = false
+    } else if (this.value == "Truck") {
+      selectedVehicle2.hidden = false
+    } else if (this.value == "Van") {
+      selectedVehicle3.hidden = false
+    }
 
-  </script>
+  });
+
+</script>
