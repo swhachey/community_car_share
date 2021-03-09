@@ -10,6 +10,8 @@
 - [![License: ISC](https://img.shields.io/badge/License-ISC-blueviolet.svg)]
   (https://opensource.org/licenses/ISC)
 
+![alt text](public/assets/community_car_share_cover.png, "Cover Photo")
+
 ---
 
 ## DESCRIPTION
@@ -53,5 +55,3 @@ You can reach the developer for additional info or questions by contacting them 
 ### LICENSES
 
 This app is covered under the license ISC. (https://opensource.org/licenses/ISC)
-
-![image](public/assets/Screen Shot 2021-03-09 at 11.50.33 AM.png)
