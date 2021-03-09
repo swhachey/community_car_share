@@ -10,7 +10,7 @@
 - [![License: ISC](https://img.shields.io/badge/License-ISC-blueviolet.svg)]
   (https://opensource.org/licenses/ISC)
 
-![alt text](public/assets/community_car_share_cover.png, "Cover Photo")
+DEPLOYED LINK: https://thawing-reaches-91071.herokuapp.com/
 
 ---
 
