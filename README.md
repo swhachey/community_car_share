@@ -55,3 +55,5 @@ You can reach the developer for additional info or questions by contacting them 
 ### LICENSES
 
 This app is covered under the license ISC. (https://opensource.org/licenses/ISC)
+
+<img width="1118" alt="Screen Shot 2021-03-09 at 11 50 33 AM" src="https://user-images.githubusercontent.com/77029657/110523246-12631100-80cf-11eb-8666-79bad369f7bb.png">
