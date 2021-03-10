@@ -7,7 +7,7 @@
 //     color: $("#colorupdate").val().trim(),
 //     price: $("#priceupdate").val().trim(),
 //     };
-
+let deleteButton = document.querySelectorAll("#delete-Vehicle")
 //   $.ajax("/api/vehicles", {
 //       type: "POST",
 //       data: newVehicle
@@ -18,6 +18,20 @@
 //         location.reload();
 //       }
 //     );
-
-//     console.log(newVehicle)
+console.log(deleteButton)
+    console.log("newVehicle")
 //   });
+deleteButton.forEach((button) => {
+  
+
+button.addEventListener('click', (e) => {
+  console.log("i've been clicked")
+    e.preventDefault()
+    const id = e.target.getAttribute('data-id');
+    fetch(`/api/vehicles/${id}`, {
+      method: 'DELETE',
+    }).then(() => {
+      location.reload();
+    });
+  });
+});
