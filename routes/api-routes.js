@@ -91,4 +91,13 @@ module.exports = (app) => {
             res.redirect("/")
         })
   });
+    app.delete('/api/vehicles/:id', (req, res) => {
+      console.log("routes.delete")
+    db.Vehicle.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then((dbVehicle) => res.json(dbVehicle));
+  });
+
 }
